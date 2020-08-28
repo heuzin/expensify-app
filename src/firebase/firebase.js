@@ -17,4 +17,17 @@ const database = firebase.database()
 
 database.ref().set({
     name: 'Matheus Silva'
+}).then(() => {
+    console.log('Data is saved')
+}).catch((error) => {
+    console.log("error", error)
 });
+
+database.ref('attributes').set({
+    height: 27,
+    weight: 150
+}).then(() => {
+    console.log('Second data showing')
+}).catch((error) => {
+    console.log('didnt go as expected', error)
+})
