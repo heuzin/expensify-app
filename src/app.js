@@ -13,14 +13,6 @@ import './firebase/firebase';
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: 'Water bill', amount: 4500 }))
-store.dispatch(addExpense({ description: 'gas bill', createdAt: 1000 }))
-store.dispatch(addExpense({ description: 'rent', amount: 109500, createdAt:  1500}))
-
-const state = store.getState()
-const visibleExpensese = getVisibleExpenses(state.expenses, state.filters)
-console.log(visibleExpensese)
-
 const jsx = (
     <Provider store={store}>
         <AppRouter />
