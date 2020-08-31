@@ -1,5 +1,3 @@
-import { act } from "react-test-renderer";
-
 // Expenses reducer
 const expensesReducerDefaultState = [];
 
